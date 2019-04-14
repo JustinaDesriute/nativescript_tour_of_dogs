@@ -1,0 +1,5 @@
+<ActionBar title="Tour of Dogs"></ActionBar>
+<StackLayout>
+    <SegmentedBar #sb [items]="navItems" selectedIndex="0" (selectedIndexChange)="navigate(sb.selectedIndex)"></SegmentedBar>
+    <router-outlet></router-outlet>
+</StackLayout>

@@ -1,0 +1,16 @@
+<StackLayout>
+    <GridLayout rows="auto" columns="*, auto" margin="5" marginTop="15">
+        <TextField #dogName hint="Dog Name" row="0" col="0" class="text-input"></TextField>
+        <Button text="Add" (tap)="add(dogName.text); dogName.text = ''" class="btn btn-primary" row="0" col="1"></Button>
+    </GridLayout>
+    <Label text="My Dog" class="h2"></Label>
+    <ScrollView>
+        <StackLayout>
+            <GridLayout *ngFor="let dog of dogs" rows="auto" columns="30, *, 10" class="dog-grid-item">
+                <Label text="{{ dog.id }}" row="0" col="0"></Label>
+                <Label text="{{ dog.name }}" row="0" col="1" (tap)="edit(dog.id)"></Label>
+                <Label text="x" row="0" col="2" (tap)="remove(dog.id)"></Label>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</StackLayout>
