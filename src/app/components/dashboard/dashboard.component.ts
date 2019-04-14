@@ -5,6 +5,7 @@ import { DataService } from "../../services/data.service";
 @Component({
     selector: "ns-dashboard",
     templateUrl: "./dashboard.component.html",
+    styleUrls: ['./dashboard.component.scss'],
     moduleId: module.id,
 })
 export class DashboardComponent {

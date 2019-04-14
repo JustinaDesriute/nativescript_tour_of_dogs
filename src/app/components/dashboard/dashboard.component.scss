@@ -1,0 +1,10 @@
+.dogs-dashboard {
+    $this: &;
+
+    &__top-dogs {
+        color: green;
+        font-size: 40;
+        text-align: center;
+    }
+
+}
